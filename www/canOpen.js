@@ -1,4 +1,5 @@
-module.exports = function CanOpen(app, callback) {
+module.exports = function CanOpen(app, isPackageName, callback) {
+	if (typeof(isPackageName)==='undefined'){isPackageName = false;}
 	cordova.exec(
 		// Success callback
 		callback,
@@ -9,6 +10,6 @@ module.exports = function CanOpen(app, callback) {
 		// Name of method in native class.
 		"appCanOpen",
 		// array of args to pass to method.
-		[app]
+		[app, isPackageName]
 	);
 };
