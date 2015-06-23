@@ -23,7 +23,7 @@ public class CanOpen extends CordovaPlugin {
 
 		PluginResult pr;
 		boolean isPackageName = false;
-		if(args.length > 1)
+		if(args.length() > 1)
 			isPackageName = args.getBoolean(1);
 
 		if(isPackageName){
